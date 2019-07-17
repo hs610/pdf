@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html dir="ltr" mozdisallowselectionprint>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="google" content="notranslate">
+  <title>PDF.js viewer using built components</title>
+
+  <style>
+    body {
+      /* background-color: #808080; */
+      margin: 0;
+      padding: 0;
+    }
+    #viewerContainer {
+      overflow: auto;
+      position: absolute;
+      left: 250px;
+      width:100%;
+      height: 100%;
+    }
+    #outlineView{
+      padding: 4px 4px 0;
+      width: 100%;
+      right: -100%;
+    }
+
+  </style>
+
+
+  <link rel="stylesheet" href="css/pdf_viewer.css">
+
+  <script src="build/pdf.js"></script>
+  <script src="build/pdf_outline_viewer.js"></script>
+  <script src="build/pdf_viewer.js"></script>
+</head>
+
+<body tabindex="1">
+  <div id="sidebarContainer">
+  <div id="sidebarContent">
+      <div id="outlineView"></div>
+  </div>
+</div>
+  <div id="viewerContainer">
+    <div id="viewer" class="pdfViewer"></div>
+  </div>
+  
+  <script src="simpleviewer.js"></script>
+</body>
+</html>
